@@ -1,176 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>小菠萝のmovieCat</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-</head>
-
-<body ng-app="moviecat">
-    <div class="top">
-        <div class="header">
-            <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>
-            <div class="search">
-                <input ng-model="query" class="my-input" type="text" placeholder="电影搜索">
-                <button>搜索</button>
-            </div>
-        </div>
-        <nav class="nav">
-            <ul>
-                <!--li中添加 active 类样式，显示焦点状态。-->
-                <li class="active"><a ui-sref="home_page">首页</a></li>
-                <li><a ui-sref="in_theaters">正在热映</a></li>
-                <li><a ui-sref="coming_soon">即将上映</a></li>
-                <li><a ui-sref="top250">Top250</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <ui-view></ui-view>
-        
-        <!--电影列表开始-->
-        <div class="list">
-            <ul>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li ng-repeat="item in list.subjects">
-                    <a href="#/details">
-                        <img src="assets/img/diwubo.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="paging">
-                <label>总共：0条记录,第0/0页;</label>
-                <!-- 加上disable类样式，表示按钮禁用状态 -->
-                <button class="prev disable ">上一页</button>
-                <button class="next">下一页</button>
-            </div>
-        </div>
-        <!--电影列表结束-->
-
-        <!-- 电影详情开始 -->
-        <div class="detail">
-            <h1>爱在来时  loving when you coming (2014)</h1>
-            <div class="dt-info">
-                <div class="dti-i"><img src="assets/img/zhuxian.jpg" alt=""></div>
-                <div class="dti-w">
-                    <p>
-                        <strong>导演：</strong>
-                        <span>XXX、XXX</span>
-                    </p>
-                    <p>
-                        <strong>主演：</strong>
-                        <span>XXX、XXX</span>
-                    </p>
-                    <p><strong>类型：</strong>爱情、生活</p>
-                    <p><strong>国家：</strong>韩国</p>
-                    <p><strong>评分：</strong>9.9</p>
-                    <p><strong>时间：</strong>2014</p>
-                    <p><strong>又名：</strong>一生所爱</p>
-                </div>
-            </div>
-            <h3>剧情简介:</h3>
-            <p style="color:#676767">这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。这里剧情简介。</p>
-        </div>
-
-        <!-- 电影详情结果 -->
-        <!--其他-->
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <p>版权所有&copy; 小菠萝</p>
-        </div>
-    </footer>
-    <!-- 引包 -->
-    <script src="assets/js/prefixfree.min.js"></script>
-    <script src="../node_modules/angular/angular.js"></script>
-    <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="app.js"></script> 
-</body>
-
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>小菠萝のmovieCat</title>    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">    <link rel="stylesheet" href="assets/css/reset.css"></head><body ng-app="moviecat">    <div class="top">        <div class="header" ng-controller="mainController">            <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>            <div class="search">                <input ng-model="q" class="my-input" type="text" placeholder="电影、影人、影院、电视剧">                <button ng-click="search(q)">搜索</button>            </div>        </div>        <nav class="nav" ng-controller="activeController">            <ul>                <!--li中添加 active 类样式，显示焦点状态。-->                <li ng-class="selectedNum==1?'active':''"><a ui-sref="home_page">首页</a></li>                <li ng-class="selectedNum==2?'active':''"><a ui-sref="in_theaters({movieType:'in_theaters',q:''})" >正在热映</a></li>                <li ng-class="selectedNum==3?'active':''"><a ui-sref="in_theaters({movieType:'coming_soon',q:''})">即将上映</a></li>                <li ng-class="selectedNum==4?'active':''"><a ui-sref="in_theaters({movieType:'top250',q:''})">Top250</a></li>            </ul>        </nav>    </div>    <div class="container">        <ui-view></ui-view>            </div>    <footer class="footer">        <div class="container">            <p>版权所有&copy; 小菠萝</p>        </div>    </footer>    <!-- 引包 -->    <script src="assets/js/prefixfree.min.js"></script>    <script src="../node_modules/angular/angular.js"></script>    <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>    <script src="app.js"></script>    <!-- 引入服务对象 -->    <script src="services/jsonpService.js"></script>    <!-- 引入控制器 -->    <script src="controllers/movieController.js"></script>    <script src="controllers/mainController.js"></script>    <script src="controllers/activeController.js"></script>    <script src="controllers/detailController.js"></script></body></html>

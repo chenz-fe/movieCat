@@ -28,18 +28,18 @@ body {
 .top .header .search {
     margin: 15px 80px 0 0;
     float: right;
-    width: 250px;
+    width: 260px;
     height: 30px;
 }
 
 .top .header .search input {
     padding-left: 10px;
     border: none;
-    width: 158px;
+    width: 168px;
     height: 28px;
     float: left;
     border: 1px solid #07A7E1;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .top .header .search button {
